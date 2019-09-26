@@ -1,0 +1,11 @@
+<div [ngClass]="{'night': isNight}" class="bg">
+    <div class="full-container">
+        <form>
+            <input class="input-section" placeholder="Hire me :)" [(ngModel)]="jsonInput" [ngModelOptions]="{standalone: true}">
+            <button mat-raised-button color="primary" (click)="convertJSON()">Do Magic</button>
+        </form>
+    </div>
+    <div [ngClass]="{'night': isNight}" class="fade-container"></div>
+</div>
+<app-result [result]="result" [isNight]="isNight"></app-result>
+ 
